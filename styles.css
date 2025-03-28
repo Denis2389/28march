@@ -1,0 +1,672 @@
+/* ------RESET------ */
+
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #0d6efd;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+ul {
+  list-style: none;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.btn-primary {
+  background-color: #14a834;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+.btn-light {
+  background-color: #f8f9fa;
+  color: #000;
+}
+.btn-light:hover {
+  background-color: #e2e6ea;
+}
+.btn-outline-primary {
+  background-color: transparent;
+  color: #14a834;
+  border: 1px solid #0d6efd;
+  padding: 0.5rem 1.5rem;
+}
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.text-center {
+  text-align: center;
+}
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+.mb-3 {
+  margin-bottom: 1rem;
+}
+.my-5 {
+  margin: 3rem 0;
+}
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.mt-3 {
+  margin-top: 1rem;
+}
+.mt-4 {
+  margin-top: 1.5rem;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.py-5 {
+  padding: 3rem 0;
+}
+.bg-light {
+  background-color: #f8f8f8;
+}
+
+.header {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.header-logo a {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #9c88ff;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+}
+.nav-list {
+  display: flex;
+  gap: 1rem;
+}
+.nav-list li a {
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+.nav-list li a:hover {
+  text-decoration: underline;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+  }
+  .nav-open {
+    display: flex !important;
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.align-items-center {
+  align-items: center;
+}
+
+.col {
+  flex: 1;
+  min-width: 0;
+}
+.col-6 {
+  flex: 0 0 calc(50% - 1rem);
+}
+.col-4 {
+  flex: 0 0 calc(33.333% - 1rem);
+}
+
+@media (max-width: 992px) {
+  .col-6, .col-4 {
+    flex: 0 0 100%;
+  }
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero-section {
+  background: url('images/mainBg.png') center/cover no-repeat;
+  min-height: 60vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.74);
+}
+.hero-content {
+  z-index: 2;
+  max-width: 800px;
+  padding: 1rem;
+}
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.hero-content p {
+  font-size: 1.1rem;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+.about-section img {
+  max-width: 100%;
+  height: auto;
+}
+.row.align-items-center > .col-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* =========================
+   SEARCH SECTION
+========================= */
+.search-section {
+  background-color: #f8f8f8; 
+  padding: 3rem 0; 
+}
+
+.search-section .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.search-desc {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+.search-box {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .search-title {
+    font-size: 1.5rem;
+  }
+  .search-desc {
+    font-size: 0.95rem;
+  }
+  .search-box {
+    padding: 1rem;
+  }
+}
+
+/* =========================
+   HOTEL CARDS
+========================= */
+.row-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-img-top {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card-body {
+  padding: 1rem;
+}
+.card-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.card-text {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   SPEZIELLE ANGEBOTE
+========================= */
+.offer-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.link-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #0d6efd;
+  font-weight: 500;
+}
+
+/* =========================
+   SPA BANNER
+========================= */
+.spa-banner {
+  background: url('./images/spaBg.png') center/cover no-repeat;
+  color: #fff;
+  position: relative;
+  padding: 3rem 1rem;
+}
+.spa-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.73);
+}
+.spa-content {
+  position: relative;
+  z-index: 2;
+}
+.d-flex {
+  display: flex;
+}
+.justify-content-center {
+  justify-content: center;
+}
+
+/* =========================
+   RESTAURANTS SECTION
+========================= */
+.restaurants-section {
+  background-color: #ffffff;
+}
+.mt-md-0 {
+  margin-top: 0;
+}
+.restaurant-image-wrap {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.restaurant-image {
+  transition: transform 0.3s ease;
+  max-width: 100%;
+}
+.restaurant-image:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   BUSINESS SECTION
+========================= */
+.business-section {
+  background-color: #f8f8f8;
+}
+.business-image-wrap {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.business-image {
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+.business-image:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   ACCORDION FAQ
+========================= */
+.accordion-item {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  background: #fff;
+}
+.accordion-header {
+  border-bottom: 1px solid #ddd;
+}
+.accordion-button {
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Прибрали font-family: "Font Awesome 5 Free"; */
+}
+
+/* Замість \f078 / \f054 використовуємо символи, щоб не залежати від Font Awesome */
+.accordion-button::after {
+  content: "▼"; /* Стрілка вниз */
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+.accordion-button.collapsed::after {
+  content: "▶"; /* Стрілка вправо */
+}
+
+/* Тіло акордеону */
+.accordion-body {
+  padding: 1rem;
+  font-size: 0.95rem;
+}
+.accordion-collapse {
+  display: none;
+}
+.accordion-collapse.open {
+  display: block;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer-dnm {
+  background: #3333338b;
+  color: #fff;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+.footer-dnm .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-dnm .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* Збільшуємо відступи між колонками */
+  margin-bottom: 1rem; /* Відступ знизу перед горизонтальною лінією */
+}
+.footer-dnm h5 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+.footer-dnm .col-4 {
+  flex: 0 0 calc(33.333% - 2rem); /* 3 колонки */
+  min-width: 220px; /* Щоб на дуже вузьких екранах не ламався текст */
+}
+.footer-dnm .footer-links a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.footer-dnm .footer-links a:hover {
+  text-decoration: underline;
+}
+.footer-dnm p {
+  margin-bottom: 0.5rem;
+}
+
+.footer-dnm .link-more {
+  color: #0d6efd;
+}
+.footer-dnm .link-more:hover {
+  text-decoration: underline;
+}
+
+/* ======== Newsletter-форма у футері ======== */
+.footer-dnm .newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; 
+}
+.footer-dnm .newsletter-fields {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer-dnm .newsletter-label {
+  font-size: 0.95rem; 
+  color: #fff;
+}
+.footer-dnm .newsletter-fields .form-control {
+  flex: 1; 
+  min-width: 0; 
+  padding: 0.5rem; /* Збільшуємо трішки падінг */
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* При зміні фокусу (для поля розсилки): */
+.footer-dnm .newsletter-fields .form-control:focus {
+  outline: none;
+  border-color: #0c8a34;
+}
+
+/* На мобільних – поле і кнопка "стопкою" */
+@media (max-width: 480px) {
+  .footer-dnm .newsletter-fields {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .footer-dnm .newsletter-fields .form-control {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.footer-dnm hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin: 1rem 0;
+}
+.footer-dnm .copyright {
+  text-align: center;
+  margin: 0;
+}
+
+/* Адаптивність футера на мобілках */
+@media (max-width: 768px) {
+  .footer-dnm .row {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .footer-dnm .col-4 {
+    flex: 0 0 100%;
+  }
+}
+
+/* ===================================
+   ДОДАТКОВІ СТИЛІ ДЛЯ ВНУТРІШНІХ СТОРІНОК
+=================================== */
+
+/* Заголовки h1, h2, h3 */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem;
+}
+h3 {
+  font-size: 1.3rem;
+  margin: 1rem 0 0.75rem;
+}
+p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Списки */
+ul {
+  margin: 1rem 0 1rem 1.5rem;
+  list-style: disc;
+}
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Форматування форм (kontakt.html тощо) */
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+.contact-form .form-group {
+  margin-bottom: 1rem;
+}
+.contact-form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.contact-form .form-control {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+.contact-form .form-control:focus {
+  border-color: #0d6efd;
+}
+
+/* Стили textarea */
+.contact-form .form-control[type="textarea"],
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.contact-form button[type="submit"] {
+  margin-top: 0.5rem;
+}
+
+section.bg-light {
+  background-color: #f8f8f8;
+}
+section.py-5 {
+  padding: 3rem 0;
+}
+
+main h1,
+main h2 {
+  color: #333;
+}
+main p,
+main li {
+  font-size: 0.95rem;
+  color: #444;
+}
+main a {
+  color: #14a834;
+  text-decoration: underline;
+}
+main a:hover {
+  text-decoration: none;
+}
+
+main hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2rem 0;
+}
+
+img.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
