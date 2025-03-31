@@ -1,5 +1,4 @@
 /* ------RESET------ */
-
 * {
   margin: 0; 
   padding: 0; 
@@ -110,7 +109,7 @@ ul {
 .header-logo a {
   font-weight: bold;
   font-size: 1.2rem;
-  color: #9c88ff;
+  color: #047d27;
   text-decoration: none;
 }
 
@@ -246,7 +245,7 @@ ul {
 ========================= */
 .search-section {
   background-color: #f8f8f8; 
-  padding: 3rem 0; 
+  padding: 3rem 0;
 }
 
 .search-section .container {
@@ -270,13 +269,20 @@ ul {
   color: #555;
 }
 
+iframe[data-cy="widget-iframe"] {
+  min-height: 800px !important; /* Даем больше места */
+}
+
 .search-box {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1.5rem;
   max-width: 600px;
+  min-height: 200px;
   margin: 0 auto;
+
+  position: relative;
 }
 
 @media (max-width: 768px) {
